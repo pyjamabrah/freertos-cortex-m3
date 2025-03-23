@@ -17,7 +17,7 @@ CFLAGS += -MMD -MP -MF"$(@:%.o=%.d)" -MT $@
 CFLAGS += $(INCLUDE_DIRS)
 
 LDFLAGS = -T ./mps2_m3.ld
-LDFLAGS += -Xlinker -Map=$(OUTPUT_DIR)/RTOSDemo.map
+LDFLAGS += -Xlinker -Map=$(OUTPUT_DIR)/freertos-cortex-m3.map
 LDFLAGS += -Xlinker --gc-sections
 LDFLAGS += -nostartfiles
 LDFLAGS += -specs=nano.specs -specs=nosys.specs # -specs=rdimon.specs
